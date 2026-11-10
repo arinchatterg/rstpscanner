@@ -21,13 +21,13 @@ pip install opencv-python-headless
 ## Usage
 
 ```bash
-python single_ip_scanner.py <TARGET_IP>
+python rstpscanner.py <TARGET_IP>
 ```
 
 Example:
 
 ```bash
-python single_ip_scanner.py 192.168.1.50
+python rstpscanner.py 192.168.1.50
 ```
 
 The script will test up to 150+ common RTSP paths and stop after finding 3 valid streams. Each confirmed stream outputs a direct `rtsp://` URL that can be copied into VLC or other media players. Proof-of-concept screenshots are saved locally as `proof_<IP>_<path>.jpg`.
