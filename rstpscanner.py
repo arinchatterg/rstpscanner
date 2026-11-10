@@ -71,14 +71,12 @@ def scan_ip(ip, port=554):
                 ret, frame = cap.read()
                 if ret and frame is not None:
                     print("\nSUCCESS! (Live unauthorized stream found)")
-                    found_streams.append(url)
+                    found_streams.append(url)    
                     
-                    # PRINT COPY-PASTE READY URL
                     print(f"\n🔗 DIRECT STREAM URL:")
                     print(f"   {url}")
                     print("-" * 60)
-                    
-                    # Optional: Save proof screenshot
+                                       
                     screenshot_name = f"proof_{ip}_{path.replace('/', '_').replace('?', '_')}.jpg"
                     cv2.imwrite(screenshot_name, frame)
                     print(f"    -> Screenshot saved as: {screenshot_name}")
